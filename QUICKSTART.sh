@@ -81,11 +81,9 @@ cd "$BASEDIR/$WORKINGDIR"
 
 if [ ! -d "tlspool" ]; then
   git clone https://github.com/arpa2/tlspool
-  git checkout 49bf1157e3471ee15bc279d41c9492646a2bf44c
 else
   cd tlspool
   git pull https://github.com/arpa2/tlspool
-  git checkout 49bf1157e3471ee15bc279d41c9492646a2bf44c
   cd ..
 fi
 
@@ -102,6 +100,14 @@ if [ ! -d "steamworks" ]; then
 else
   cd steamworks 
   git pull https://github.com/arpa2/steamworks
+  cd ..
+fi
+
+if [ ! -d "gnutls-kdh" ]; then
+  git clone https://github.com/arpa2/gnutls-kdh
+else
+  cd steamworks 
+  git pull https://github.com/arpa2/gnutls-kdh
   cd ..
 fi
 
